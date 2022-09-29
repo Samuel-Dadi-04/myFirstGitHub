@@ -1,0 +1,104 @@
+<html>
+<head>
+<title> APT Friends forever group</title>
+<style>
+h1{
+color:red;
+}
+h2{
+color:blue;
+}
+h3{
+color:yellow;
+}
+body{
+background-color:lightGray;
+}
+p{
+font-size:30px;
+}
+select,button{
+width:200px;
+height:50px;
+font-size:20px;
+}
+img{
+width:100%;
+border-radius:20px;
+margin-bottom:15px;
+}
+</style>
+</head>
+<body>
+<center>
+<h1>Hello Guys, Welcome </h1>
+<h2>This page will exprire in few minutes<h2>
+<h3 id="timer"></h3>
+<br/>
+<label style="font-size:30px"> Select your APT PIN to get your Pics: </label>
+<select id="lists">
+<option value="0">--select--</option>
+<option value="1">19010-CM-005</option>
+<option value="2">19010-CM-006</option>
+<option value="3">19010-CM-007</option>
+<option value="4">19010-CM-008</option>
+<option value="5">19010-CM-012</option>
+<option value="6">19010-CM-015</option>
+<option value="7">19010-CM-018</option>
+<option value="8">19010-CM-024</option>
+<option value="9">19010-CM-025</option>
+<option value="10">19010-CM-027</option>
+<option value="11">19010-CM-032</option>
+<option value="12">19010-CM-033</option>
+<option value="13">19010-CM-036</option>
+<option value="14">19010-CM-051</option>
+<option value="15">19010-CM-052</option>
+<option value="16">19010-CM-053</option>
+</select>
+<button id="submitbtn" onclick="getDetails()">Submit</button>
+<p id="notify"></p>
+<img src="empty.jpg" id="img1" hidden class="img"/>
+<img src="empty.jpg" id="img2" hidden class="img"/>
+</center>
+<script>
+var x=document.getElementById("timer");
+x.innerHTML="Closes Soon";
+</script>
+<script>
+function getDetails()
+{
+var select=document.getElementById("lists");
+var option=select.options[select.selectedIndex].value;
+changeNote(option);
+addImages(option);
+}
+function addImages(n)
+{
+var imgs=document.getElementsByClassName("img");
+var names=getImageNames(n);
+for(var i=0;i<2;i++)
+{
+imgs[i].src=names[i];
+imgs[i].hidden=false;
+}
+}
+function getImageNames(n)
+{
+var names=[];
+names[0]="image0"+n+".jpg";
+names[1]="image1"+n+".jpg";
+return names;
+}
+function changeNote(number)
+{
+document.getElementById("notify").innerHTML="Hi "+getName(number)+", See your Pics";
+
+}
+function getName(n)
+{
+const names=["Unknown","Rakesh","Charan","Jaya","Samuel","Lakshmi","Gayatri","Sai","Sowjanya","Sai Ram","Subhani","Ramya","Krishna","Darling","Santhosh","Syam","Sindhu"];
+return names[n];
+}
+</script>
+</body>
+</html>
