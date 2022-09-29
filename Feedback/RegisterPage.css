@@ -1,0 +1,33 @@
+fieldset
+{
+width:50%;
+margin:0 25% 0 25%;
+}
+body{
+text-align:center;
+margin:50px;
+}
+.title
+{
+font-size:175%;
+}
+legend
+{
+font-size:125%;
+}
+input,#branchSelect
+{
+width:30%;
+float:right;
+margin-right:25%;
+}
+#submitBtn
+{
+float:none;
+width:15%;
+margin:0 0 0 0;
+}
+#Ack
+{
+color:#ff0000;
+}

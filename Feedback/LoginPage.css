@@ -1,0 +1,33 @@
+legend
+{
+font-size:125%;
+}
+body
+{
+margin:50px 50px 50px 50px;
+text-align:center;
+}
+.title
+{
+font-size:175%;
+}
+#passwordHOD
+{
+width:40%;
+}
+.star
+{
+float:right;
+margin-right:25%;
+border:0px;
+border-bottom:1px solid;
+}
+fieldset
+{
+width:50%;
+margin:0% 25% 0% 25%;
+}
+#Ack
+{
+color:#ff0000;
+}

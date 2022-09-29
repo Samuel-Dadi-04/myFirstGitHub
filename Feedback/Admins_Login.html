@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="LoginPage.css"/>
+	<script type="text/javascript" src="Admins_Login_Script.js">
+		
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend>FeedBack</legend>
+		<form method="post" action="b.php">
+		<label class="title">Admins Log In</label>
+		<br><br>
+		<label>Branch</label>:
+		<select class="star" name="HODBranch" autofocus="on" id="Department" onfocusout="verifyDepartment()">
+			<option value="" >Select...</option>
+			<option value="Principal" >Principal</option>
+			<optgroup label="Head of the Department">
+				<option value="DCME" >Diploma in Computer Engineering</option>
+				<option value="DECE" >Diploma in Electronic Engineering</option>
+				<option value="DEEE" >Diploma in Electrical Engineering</option>
+				<option value="DCE" >Diploma in Civil Engineering</option>
+				<option value="DME" >Diploma in Mechanical Engineering</option>
+				<option value="DAE" >Diploma in Automobile Engineering</option>
+				<option value="DAAE" >Diploma in Architecture Engineering</option>
+			</optgroup>
+		</select>
+		<br>
+		<br>
+		<label>Password</label>:
+		<input class="star" required type="password" name="password" id="passwordHOD" autofocus="on">
+		<br><br>
+		<a href="Student_Login.html">Login as Student</a>
+		<br> 
+		<p id="Ack"></p>
+		<input type="submit" value="Login" name="submit" id="submitBtn">
+		<input type="reset" id="resetBtn">
+		</form>
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="LoginPage.css">
+	<script type="text/javascript" src="Student_Login_Script.js">
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend>FeedBack</legend>
+		<form method="POST" action="a.php" autocomplete="false">
+		<label class="title">Student Log In</label>
+		<br><br>
+		<label>PIN</label>:
+		<input class="star" required type="text" name="pinNumber" id="PIN" onfocusout="verifyPin()" autofocus="on" maxlength="12">
+		<br>
+		<br>
+		<label>Password</label>:
+		<input class="star" required type="password" name="password" id="password" autofocus="on">
+		<br><br>
+		<a class="links" href="Admins_Login.html">Login as HOD</a>
+		<br>
+		<a class="links" href="Student_Register.html">Register</a>
+		<br>
+		<a class="links" href="aaaz.html">Forgot Password</a>
+		<br>
+		<p id="Ack"></p>
+		<input type="submit" name="submit" value="Login" id="submitBtn" autofocus="on">
+		<input type="reset" id="resetBtn">
+		</form>
+	</fieldset>
+</body>
+</html>

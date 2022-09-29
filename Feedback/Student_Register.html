@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="RegisterPage.css" type="text/css"/>
+	<script type="text/javascript" src="Student_Register_Script.js"></script>
+</head>
+<body>
+	<fieldset>
+		<legend>FeedBack</legend>
+		<form method="post" action="abc.html">
+		<label class="title">Register as Student</label>
+		<br><br>
+		<label>Name</label>:
+		<input required type="text" name="stdName" class="noSymbol" onfocusout="verifyName()" autofocus="on">
+		<br><br>
+		<label>Surname</label>:
+		<input required type="text" name="stdSurname"  class="noSymbol" onfocusout="verifySurname()" autofocus="on">
+		<br><br>
+		<label>PIN</label>:
+		<input required type="text" name="pinNumber" id="PIN" onfocusout="verifyPin()" autofocus="on">
+		<br><br>
+		<label>Date of Birth</label>:
+		<input required type="date" name="DOB" id="DOB"onfocusout="verifyDOB()" autofocus="on">
+		<br><br>
+		<label>Phone</label>:
+		<input required type="tel" name="phone" class="noSymbol" onfocusout="verifyPhone()" autofocus="on">
+		<br><br>
+		<label>Branch</label>:
+		<select name="brachStd" id="branchSelect" onfocusout="verifyBranch()"  autofocus="on">
+			<option value="">Select</option>
+			<option value="DCME">Diploma in Computer Engineering</option>
+			<option value="DECE">Diploma in Electronic Engineering</option>
+			<option value="DEEE">Diploma in Electrical Engineering</option>
+			<option value="DCE">Diploma in Civil Engineering</option>
+			<option value="DME">Diploma in Mechanical Engineering</option>
+			<option value="DAE">Diploma in Automobile Engineering</option>
+			<option value="DAAE">Diploma in Architecture Engineering</option>
+		</select>
+		<br><br>
+		<label>Password:</label>
+		<input type="password" name="password" id="pass">
+		<br><br>
+		<label>Re-Enter Password:</label>
+		<input type="password" name="rePassword" id="rpass">
+		<br><br>
+		<select style="width:25%" class="qdrop">
+			<option value="">Selct a question</option>
+			<option value="What was the name of First PET?">What was the name of First PET?</option>
+			<option value="What is your Dream Job?">What is your Dream Job?</option>
+			<option value="What is the name of your School?">What is the name of your School?</option>
+			<option value="What was your Childhood Nickname?">What was your Childhood Nickname?</option>
+			<option value="What was the first thing you learnt in cooking?">What was the first thing you learnt in cooking?</option>
+			<option value="What was the favorite type of movie?">What was the favorite type of movie?</option>
+			<option value="What was the first Book I ever read?">What was the first Book I ever read?</option>
+		</select>
+		<button onclick="addQuestion(0)" style="border-radius:50%;background: #ffffff;border: 1px solid black" title="add question">&#10009;</button>:
+		<input type="text" name="ans1" class="answerFeild" onfocusin="getQuestion(0)">
+		<br><br>
+		<a href="Student_Login.html">Login</a>
+		<p id="Ack"></p>		
+		<input type="submit" value="Register" id="submitBtn">
+		</form>
+	</fieldset>
+	<script type="text/javascript">
+		document.getElementById("submitBtn").disabled=true;
+		function getQuestion(index) {
+			var in=document.getElementsByClassName("answerFeild")[index];
+			in.value=document.getElementsByClassName("qdrop")[index];
+		}
+	</script>
+</body>
+</html>
